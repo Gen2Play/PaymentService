@@ -4,7 +4,14 @@ services:
   # database section
   paymentdb:
     image: postgres:alpine3.16
-    
+  
+  # microservices api section
+  payment.api:
+    image: ${DOCKER_REGISTRY-}payment-api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/Payment.API/Dockerfile
+  
   # infrastructure section
   rabbitmq:
     image: rabbitmq:3-management-alpine

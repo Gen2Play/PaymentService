@@ -2,13 +2,13 @@
 services:
   # database section
   
-  #customerdb: postgres
+  #payment: postgres
   paymentdb:
     container_name: postgresdb
     environment:
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=123Pa$$$$word!
-      - POSTGRES_DB=DiscountDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "123Pa$$$$word!"
+      POSTGRES_DB: PaymentDb
     restart: always
     ports:
       - "5433:5432"
@@ -47,7 +47,7 @@ services:
     container_name: elasticsearch
     environment:
       - xpack.monitoring.enabled=true
-      - xpack.watcher.enalbed=false
+      - xpack.watcher.enabled=false
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - discovery.type=single-node
     ports:
@@ -63,3 +63,15 @@ services:
       - elasticsearch
     ports:
       - "5601:5601"
+        
+  payment.api:
+    container_name: payment.api
+    environment:
+      - ASPNET_ENVIRONMENT=Development
+      - ASPNET_CORE_URLS=http://+80
+      - "ConnectionStrings:DefaultConnectionString=Server=paymentdb;Port=5432;Database=PaymentDb;User Id=postgres;Password=123Pa$$$$word!;"
+    depends_on:
+      - paymentdb
+    ports:
+      - "6003:80"
+    restart: always
