@@ -5,12 +5,21 @@ services:
   paymentdb:
     image: postgres:alpine3.16
   
+  notificationdb:
+    image: redis:alpine
+  
   # microservices api section
   payment.api:
     image: ${DOCKER_REGISTRY-}payment-api:${PLATFORM:-linux}-${TAG:-latest}
     build:
       context: .
       dockerfile: Services/Payment.API/Dockerfile
+      
+  notification.api:
+    image: ${DOCKER_REGISTRY-}notification-api:${PLATFORM:-linux}-${TAG:-latest}
+    build:
+      context: .
+      dockerfile: Services/Notification.API/Dockerfile
   
   # infrastructure section
   rabbitmq:

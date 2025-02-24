@@ -4,7 +4,7 @@ namespace Payment.API.Controllers
 {
     public class HomeController : ControllerBase
     {
-        // GET
+        [HttpGet]
         public IActionResult Index()
         {
             return Redirect("~/swagger");

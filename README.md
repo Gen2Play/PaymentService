@@ -32,7 +32,8 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d --remo
 - Run Compound to start multi projects
 ---
 ## Application URLs - DEVELOPMENT Environment:
-
+- Payment API: http://localhost:5000/swagger/index.html
+- Notification API: http://localhost:5050/swagger/index.html
 ---
 ## Application URLs - PRODUCTION Environment:
 
