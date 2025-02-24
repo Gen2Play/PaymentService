@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScheduledJob", "ScheduledJo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebHealthStatus", "src\WebApps\WebHealthStatus\WebHealthStatus.csproj", "{2874DCC2-DA39-421E-B20B-357DA9241E65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.API", "src\Services\Payment.API\Payment.API.csproj", "{EAD3DE63-AD2D-4457-BDDC-15AB59309A92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentService", "src\Services\PaymentService\PaymentService.csproj", "{EAD3DE63-AD2D-4457-BDDC-15AB59309A92}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.API", "src\Services\Hangfire.API\Hangfire.API.csproj", "{28256C92-F504-465D-9810-0DE681AF4614}"
 EndProject
@@ -49,7 +49,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGw", "src\ApiGatew
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifications", "Notifications", "{F5C90D1C-1F3C-48A9-AA23-79414A886894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notification.API", "src\Services\Notification.API\Notification.API.csproj", "{B8374E5B-6613-4A69-B94D-7369190D0DBC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "src\Services\NotificationService\NotificationService.csproj", "{B8374E5B-6613-4A69-B94D-7369190D0DBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
